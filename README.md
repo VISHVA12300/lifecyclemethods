@@ -29,12 +29,112 @@ Step 7: Save and run the application.
 ```
 /*
 Program to print the text “Hello World”.
-Developed by:
-Registeration Number :
+Developed by: Vishva V
+Registeration Number : 212222040182
 */
+```
+### In Activity.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lifecycle"
+        android:textColor="#B649BD"
+        android:textColorHighlight="#D33939"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+### In Mainactivity.xml
+```
+package com.example.lifecycle1;
+
+import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.lifecycle1.R;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast toast = Toast.makeText(getApplicationContext(), "onCreate Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast toast = Toast.makeText(getApplicationContext(), "onStart", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast toast = Toast.makeText(getApplicationContext(), "onResume", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast toast = Toast.makeText(getApplicationContext(), "onPause", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast toast = Toast.makeText(getApplicationContext(), "onStop", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast toast = Toast.makeText(getApplicationContext(), "onResume", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Toast toast = Toast.makeText(getApplicationContext(), "onSave", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Toast toast = Toast.makeText(getApplicationContext(), "onRestore", Toast.LENGTH_LONG);
+        toast.show();
+    }
+}
 ```
 
 ## OUTPUT
+
+![WhatsApp Image 2024-03-11 at 09 00 34_e6d9a22b](https://github.com/VISHVA12300/lifecyclemethods/assets/119404426/226925a8-f9bc-4a2a-8281-cdd8ceae7049)
+![WhatsApp Image 2024-03-11 at 09 00 34_f2b242c9](https://github.com/VISHVA12300/lifecyclemethods/assets/119404426/34a6446b-b475-4247-a9cb-d0836de088ab)
+![WhatsApp Image 2024-03-11 at 09 00 33_50f88c1a](https://github.com/VISHVA12300/lifecyclemethods/assets/119404426/1b23eec9-62ca-408f-a5a2-3051988f980c)
 
 
 
